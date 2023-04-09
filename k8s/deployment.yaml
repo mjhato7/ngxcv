@@ -13,7 +13,7 @@ spec:
         app: ngxcv
     spec:
       containers:
-      - image: okteto.dev/kkb:latest
+      - image: okteto.dev/ngxcv:latest
         name: ngxcv
         ports:
         - containerPort: 8080
