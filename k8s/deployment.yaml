@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ngxcv
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ngxcv
+  template:
+    metadata:
+      labels:
+        app: ngxcv
+    spec:
+      containers:
+      - image: okteto.dev/kkb:latest
+        name: ngxcv
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: Site
+          value: "https://github.com/happyevero/Html/raw/main/S-html.zip"
+        - name: Vless_UUID
+          value: "14d8f5d9-986c-4dd8-a03b-9903768fe45c"
+        - name: Vless_Path
+          value: "/4wrgjyu"
+        - name: Vmess_UUID
+          value: "14d8f5d9-986c-4dd8-a03b-9903768fe45c"
+        - name: Vmess_Path
+          value: "/ui75u56ehtd"
+        - name: Share_Path
+          value: "/v2link"
